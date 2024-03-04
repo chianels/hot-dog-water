@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotdog history</title>
+    <style>
+        body {
+            background-color: mintcream;
+            color: indigo;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.5s;
+        }
+        body.night-mode {
+            background-color: rebeccapurple;
+            color: white;
+        }
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        p {
+            font-size: 1em;
+            line-height: 1.6;
+            text-align: left;
+        }
+        .menu {
+            position: sticky;
+            top: 0;
+            background-color: black;
+            padding: 10px 0;
+            text-align: center;
+            z-index: 1000; /* Ensure it appears above other elements */
+        }
+        .menu a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+        .menu button {
+            color: white;
+            background-color: transparent;
+            border: 0.1em solid grey;
+            margin: 0 10px;
+            font-size: 14px;
+            cursor: pointer;
+            padding:15px;
+        }
+        .menu a:hover {
+            background-color: pink;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* Adjusted to four columns */
+            grid-gap: 20px;
+            margin-top: 40px;
+        }
+        .grid-container img {
+            width: 100%;
+            height: 200px; /* Fixed height for all images */
+            object-fit: cover; /* Ensure images maintain aspect ratio and cover the allocated space */
+        }
+        #myBtn {
+            display: none; /* Hide the button by default */
+            position: fixed; /* Fixed position */
+            bottom: 20px; /* Place the button 20px from the bottom */
+            right: 30px; /* Place the button 30px from the right */
+            z-index: 99; /* Ensure it appears above other elements */
+            border: none; /* No border */
+            outline: none; /* No outline */
+            background-color: black; /* Button background color */
+            color: white; /* Button text color */
+            cursor: pointer; /* Change cursor to pointer on hover */
+            padding: 15px; /* Add some padding */
+            border-radius: 50%; /* Make it a circle */
+            font-size: 16px; /* Set font size */
+        }
+
+        #myBtn:hover {
+            background-color: pink; /* Change background color on hover */
+        }
+        .container img {
+            max-width: 100%;
+            height: auto;
+        }
+
+
+        @media only screen and (max-width: 600px) {
+            h1 {
+                font-size: 1.5em;
+            }
+            p {
+                font-size: 0.9em;
+            }
+            .menu a {
+                font-size: 16px;
+            }
+            .grid-container {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <a href="./untitled.html">Home</a>
+        <a href="./about.html">About</a>
+        <a href="./history.html">Hotdog History</a>
+        <a href="./tiktak.html">Hotdog Game</a>
+        <button id="nightModeBtn" onclick="toggleNightMode()">Night Mode</button>
+    </div>
+    <div class="container">
+        <h1>Hot Dog History</h1>
+        <h3>Dachshunds, Dog Wagons and Other Important Elements of Hot Dog History</h3>
+        <p>Sausage is one of the oldest forms of processed food, having been mentioned in Homer's Odyssey as far back as the 9th Century B.C. <br><br>Frankfurt-am-Main, Germany, is traditionally credited with originating the frankfurter. However, this claim is disputed by those who assert that the popular sausage - known as a "dachshund" or "little-dog" sausage - was created in the late 1600's by Johann Georghehner, a butcher, living in Coburg, Germany. According to this report, Georghehner later traveled to Frankfurt to promote his new product.
+        </p>
+
+        <div class="grid-container">
+            <img src="https://media.istockphoto.com/id/998822712/photo/a-dog-in-a-hotdog-suit-3d-illustration-isolated-on-white.jpg?s=612x612&w=0&k=20&c=Ua4QpIdJs9xPg8MxaONa8Ph3t4KFHu0o3RU2C56xV-c=" alt="Image 1">
+            <img src="https://i.pinimg.com/474x/10/35/e6/1035e6a949c97724ec69905e16aac670.jpg" alt="Image 2">
+            <img src="https://i.ebayimg.com/images/g/qJQAAOSwrJNgw~ZJ/s-l1600.jpg" alt="Image 3">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLIDdSvJxW97QtQMQH0Ox_0ZYvNN5KT4WoTA&usqp=CAU" alt="Image 4">
+        </div>
+
+        <h2>In 1987, the city of Frankfurt celebrated the 500th birthday of the hot dog in that city.</h2>
+        <p>It's said that the frankfurter was developed there in 1487, five years before Christopher Columbus set sail for the new world. The people of Vienna (Wien), Austria, point to the term "wiener" to prove their claim as the birthplace of the hot dog. As it turns out, it is likely that the North American hot dog comes from a widespread common European sausage brought here by butchers of several nationalities. Also in doubt is who first served the dachshund sausage with a roll. One report says a German immigrant sold them, along with milk rolls and sauerkraut, from a push cart in New York City's Bowery during the 1860's. In 1871, Charles Feltman, a German baker opened up the first Coney Island hot dog stand selling 3,684 dachshund sausages in a milk roll during his first year in business.
+        </p>
+        <h3>The year 1893 was an important date in hot dog history.</h3>
+        <p>In Chicago that year, the Colombian Exposition brought hordes of visitors who consumed large quantities of sausages sold by vendors. People liked this food that was easy to eat, convenient and inexpensive. Hot dog historian Bruce Kraig, Ph.D., retired professor emeritus at Roosevelt University, says the Germans always ate the dachshund sausages with bread. Since the sausage culture is German, it is likely that Germans introduced the practice of eating the dachshund sausages, which we today know as the hot dog, nestled in a bun.
+        </p>
+
+        <img src="https://i.redd.it/tuyp9k89b3u91.jpg" alt="Jesus Christ with a piece of hotdog in his hands because hotdogs are everything">
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+
+    </div>
+
+    <script>
+        function toggleNightMode() {
+            document.body.classList.toggle('night-mode');
+            var button = document.getElementById("nightModeBtn");
+            if (document.body.classList.contains('night-mode')) {
+                button.innerText = "Day Mode";
+            } else {
+                button.innerText = "Night Mode";
+            }
+        }
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("myBtn").style.display = "block";
+          } else {
+            document.getElementById("myBtn").style.display = "none";
+          }
+        }
+
+        // Smooth scroll function
+        function scrollToTop() {
+          const c = document.documentElement.scrollTop || document.body.scrollTop;
+          if (c > 0) {
+            window.requestAnimationFrame(scrollToTop);
+            window.scrollTo(0, c - c / 8);
+          }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document smoothly
+        document.getElementById("myBtn").addEventListener("click", function() {
+          scrollToTop();
+        });
+
+    </script>
+</body>
+</html>

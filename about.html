@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hot Dog Dog</title>
+    <style>
+        body {
+            background-color: lemonchiffon;
+            color: indigo;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.5s;
+        }
+        body.night-mode {
+            background-color: navy;
+            color: white;
+        }
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box;
+            position: relative;
+            height: 100vh;
+        }
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        p {
+            font-size: 1em;
+            line-height: 1.6;
+            text-align: left;
+        }
+        .moving-image {
+            position: absolute;
+            bottom: 0;
+            left: -20px; /* Start from off-screen left */
+            animation: slide 5s linear infinite; /* Adjust animation duration as needed */
+            width: 100%;
+            height: auto;
+        }
+        @keyframes slide {
+            0% { left: -200px; }
+            50% { left: calc(100% + 200px); } /* Move image to off-screen right */
+            100% { left: -200px; } /* Move image back to off-screen left */
+        }
+        .menu {
+            position: sticky;
+            top: 0;
+            background-color: black;
+            padding: 10px 0;
+            text-align: center;
+            z-index: 1000; /* Ensure it appears above other elements */
+        }
+        .menu a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+        .menu button {
+            color: white;
+            background-color: transparent;
+            border: 0.1em solid grey;
+            margin: 0 10px;
+            font-size: 14px;
+            cursor: pointer;
+            padding:15px;
+        }
+        .menu a:hover {
+            background-color: pink;
+        }
+        #myBtn {
+            display: none; /* Hide the button by default */
+            position: fixed; /* Fixed position */
+            bottom: 20px; /* Place the button 20px from the bottom */
+            right: 30px; /* Place the button 30px from the right */
+            z-index: 99; /* Ensure it appears above other elements */
+            border: none; /* No border */
+            outline: none; /* No outline */
+            background-color: black; /* Button background color */
+            color: white; /* Button text color */
+            cursor: pointer; /* Change cursor to pointer on hover */
+            padding: 15px; /* Add some padding */
+            border-radius: 50%; /* Make it a circle */
+            font-size: 16px; /* Set font size */
+        }
+
+        #myBtn:hover {
+            background-color: pink; /* Change background color on hover */
+        }
+
+        @media only screen and (max-width: 600px) {
+            h1 {
+                font-size: 1.5em;
+            }
+            p {
+                font-size: 0.9em;
+            }
+            .menu a {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <a href="./untitled.html">Home</a>
+        <a href="./about.html">About</a>
+        <a href="./history.html">Hotdog History</a>
+        <a href="./tiktak.html">Hotdog Game</a>
+        <button id="nightModeBtn" onclick="toggleNightMode()">Night Mode</button>
+    </div>
+    <div class="container">
+        <h1>About</h1>
+        <h2>Why does this exist?</h2>
+        <p>One of the greatest questions humanity can ask. One answer, nobody knows. This is the most useless site ever made. Did I have fun making this? Most defenitly, (idk how to spell that word). But yeah, my plan was selling hot dog water as a perfume but people didn't seem to like that idea. I made marketing plans, styleguides, mock ups, but it was in vain. Nobody believed in me. So here I am, making a website for hot dogs. And what kind of hot dogs hehe. Of course I made everthing myself, coded everything by hand, no help from anyone. That's how good I am ☺️</p>
+        <h2>What are my plans with this abdomination?</h2>
+        <p>To be fair, I have no idea. I started this project just because I thought I could. Maybe this will become a project in the long run that will get bigger in time. Adding more interesting pages, more things you didn't know, more games like Hot Dog Dog. Who knows? Well, I do, cuz I made it and am willing to expand the site. I have motivation to put the most stupid and ugly shit ever on here.
+        <img src="https://cdn.inspireuplift.com/uploads/images/seller_products/1689754497_04.png" class="moving-image" alt="Moving Image">
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    </div>
+
+    <script>
+        function toggleNightMode() {
+            document.body.classList.toggle('night-mode');
+            var button = document.getElementById("nightModeBtn");
+            if (document.body.classList.contains('night-mode')) {
+                button.innerText = "Day Mode";
+            } else {
+                button.innerText = "Night Mode";
+            }
+        }
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("myBtn").style.display = "block";
+          } else {
+            document.getElementById("myBtn").style.display = "none";
+          }
+        }
+
+        // Smooth scroll function
+        function scrollToTop() {
+            const c = document.documentElement.scrollTop || document.body.scrollTop;
+            if (c > 0) {
+                window.requestAnimationFrame(scrollToTop);
+                window.scrollTo(0, c - c / 8);
+            }
+        }
+
+
+        // When the user clicks on the button, scroll to the top of the document smoothly
+        document.getElementById("myBtn").addEventListener("click", function() {
+          scrollToTop();
+        });
+    </script>
+</body>
+</html>
