@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress</title>
+    <style>
+        body {
+            background-color: mintcream;
+            color: indigo;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.5s;
+        }
+        body.night-mode {
+            background-color: rebeccapurple;
+            color: white;
+        }
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        p {
+            font-size: 1em;
+            line-height: 1.6;
+            text-align: left;
+        }
+        .menu {
+            position: sticky;
+            top: 0;
+            background-color: black;
+            padding: 10px 0;
+            text-align: center;
+            z-index: 1000; /* Ensure it appears above other elements */
+        }
+        .menu a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+        .menu button {
+            color: white;
+            background-color: transparent;
+            border: 0.1em solid grey;
+            margin: 0 10px;
+            font-size: 14px;
+            cursor: pointer;
+            padding:15px;
+        }
+        .menu a:hover {
+            background-color: pink;
+        }
+       
+        #myBtn {
+            display: none; /* Hide the button by default */
+            position: fixed; /* Fixed position */
+            bottom: 20px; /* Place the button 20px from the bottom */
+            right: 30px; /* Place the button 30px from the right */
+            z-index: 99; /* Ensure it appears above other elements */
+            border: none; /* No border */
+            outline: none; /* No outline */
+            background-color: black; /* Button background color */
+            color: white; /* Button text color */
+            cursor: pointer; /* Change cursor to pointer on hover */
+            padding: 15px; /* Add some padding */
+            border-radius: 50%; /* Make it a circle */
+            font-size: 16px; /* Set font size */
+        }
+
+        #myBtn:hover {
+            background-color: pink; /* Change background color on hover */
+        }
+        .container img {
+            max-width: 100%;
+            height: auto;
+        }
+
+
+        @media only screen and (max-width: 600px) {
+            h1 {
+                font-size: 1.5em;
+            }
+            p {
+                font-size: 0.9em;
+            }
+            .menu a {
+                font-size: 16px;
+            }
+            .grid-container {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <a href="./index.html">Home</a>
+        <a href="./about.html">About</a>
+        <a href="./history.html">Hotdog History</a>
+        <a href="./tiktak.html">Hotdog Game</a>
+        <a href="./progress.html">Progress</a>
+        <button id="nightModeBtn" onclick="toggleNightMode()">Night Mode</button>
+    </div>
+    <div class="container">
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    </div>
+
+    <script>
+        function toggleNightMode() {
+            document.body.classList.toggle('night-mode');
+            var button = document.getElementById("nightModeBtn");
+            if (document.body.classList.contains('night-mode')) {
+                button.innerText = "Day Mode";
+            } else {
+                button.innerText = "Night Mode";
+            }
+        }
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("myBtn").style.display = "block";
+          } else {
+            document.getElementById("myBtn").style.display = "none";
+          }
+        }
+
+        // Smooth scroll function
+        function scrollToTop() {
+          const c = document.documentElement.scrollTop || document.body.scrollTop;
+          if (c > 0) {
+            window.requestAnimationFrame(scrollToTop);
+            window.scrollTo(0, c - c / 8);
+          }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document smoothly
+        document.getElementById("myBtn").addEventListener("click", function() {
+          scrollToTop();
+        });
+
+    </script>
+</body>
+</html>
