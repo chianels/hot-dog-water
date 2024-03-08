@@ -15,7 +15,6 @@ body.night-mode {
     padding: 20px;
     box-sizing: border-box;
     position: relative;
-    height: 100vh;
 }
 h1 {
     font-size: 2em;
