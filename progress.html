@@ -6,10 +6,9 @@
     <title>Progress</title>
     <style>
         body {
-            background-color: mintcream;
-            color: indigo;
-            font-family: 'Comic Sans MS', cursive, sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
+            color: black;
             padding: 0;
             transition: background-color 0.5s;
         }
@@ -80,11 +79,24 @@
         #myBtn:hover {
             background-color: pink; /* Change background color on hover */
         }
+
         .container img {
             max-width: 100%;
             height: auto;
         }
 
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 20px;
+            margin-top: 40px;
+        }
+
+        .grid-container img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
 
         @media only screen and (max-width: 600px) {
             h1 {
@@ -112,9 +124,33 @@
         <button id="nightModeBtn" onclick="toggleNightMode()">Night Mode</button>
     </div>
     <div class="container">
-        <h2>Research naar hot dawgs</h2>
-        
+        <h1>Research naar hot dawgs</h1>
+        <h2>Persoonlijke mening</h2>
+        <h3>Wat vind je zo leuk aan hot dawgs?</h3>
+        <p>Een hot dawg is grappig. Het heeft een funny vorm en gekke geur. Zeker het water dat je er gratis bij krijgt. Wat me trouwens doet herinneren, je krijgt letterlijk gratis water bij hot dogs? Hiermee kan je superveel leuke dingen mee doen. Niet alleen drinken, maar je kan het gebruiken om bepaalde zaken mee te wassen zoals je haar, het heeft een geur dus je kan het als parfum gebruiken.<br></p>
+        <h3>En wat zie jij dan de meest gebruikte vorm van het water?</h3>
+        <p>Ik denk, ik had al langer de gedachte om parfum te creëren van hot dog water. Ik had hier een heel marketing plan voor opgesteld met mock-ups en alles. Natuurlijk vond niemand dit een goed idee, dus de meeste zaken die ik hiervoor gemaakt had zijn weg. Maar ik denk dat ik terug moed gevonden heb om dit idee verder uit te werken.</p>
+        <h3>Wat voor zaken wil hiervoor maken?</h3>
+        <p>Natuurlijk een flesje. Het ontwerp van een mooi parfumflesje. Flyers dat reclame maakt voor de parfum zeker ook. Een marketingplan voor advertentie is ook belangrijk en niet te vergeten! Een webshop mogelijks zou voor een latere fase helpen. Momenteel kan ik het zelf verkopen uit me garage. Misschien advertentie filmpjes, mond op mond reclame en een hoop goede moed.</p>
         <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    </div>
+    <div class="container">
+        <h1>MOODOARD</h1>
+        <h2>Inspiratie foto's</h2>
+        <div class="grid-container">
+            <img src="https://api.time.com/wp-content/uploads/2018/10/goop-summit-bans-hot-dog-water.jpg" alt="Image 1">
+            <img src="https://c8t9b2g8.rocketcdn.me/wp-content/uploads/2023/06/boiled-hot-dogs_183082348.jpg" alt="Image 2">
+            <img src="https://assets.untappd.com/site/beer_logos_hd/beer-168925_f0df1_hd.jpeg" alt="Image 3">
+            <img src="https://www.usatoday.com/gcdn/-mm-/c17deda0e86ae6a3385c009dcacffc54af1a7571/c=0-0-1200-1600/local/-/media/2018/06/21/USATODAY/USATODAY/636651856632601425-hotdog1.jpeg" alt="Image 4">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3Ia0RYnkRc38TGaCdFcH2IZPEfeMDBN5zXA&usqp=CAU" alt="Image 1">
+            <img src="https://reesespeaks.files.wordpress.com/2014/02/normal-way-of-cooking-hds.jpg" alt="Image 2">
+            <img src="https://recipes.net/wp-content/uploads/2023/10/how-to-steam-a-hot-dog-without-a-steamer-1696428466.jpg" alt="Image 3">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3RmpBFagDWHTowC9BoH6csckS2A79ttD7uQ&usqp=CAU" alt="Image 4">
+        </div>
+    </div>
+    <div class="container">
+        <h1>KLEURENPALETTEN</h1>
+        <h2>Mogelijke kleuren schema's voor bepaalde zaken:</h2>
     </div>
 
     <script>
