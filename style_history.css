@@ -1,10 +1,9 @@
 body {
-            background-color: mintcream;
-            color: indigo;
-            font-family: 'Comic Sans MS', cursive, sans-serif;
-            margin: 0;
-            padding: 0;
-            transition: background-color 0.5s;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    color: black;
+    padding: 0;
+    transition: background-color 0.5s;
         }
         body.night-mode {
             background-color: rebeccapurple;
